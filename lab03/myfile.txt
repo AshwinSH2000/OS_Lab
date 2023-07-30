@@ -1,0 +1,2 @@
+mystring is the first word
+first wrod is mystring

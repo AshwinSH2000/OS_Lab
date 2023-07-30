@@ -1,0 +1,133 @@
+$ mkdir 180953352		//created a directory 
+
+$ cd 180953352			//changed the working directory
+
+$ mkdir lab_01			//created a new directory
+
+$ echo $SHELL			//current shell
+/bin/bash
+
+$ pwd
+/home/student1/180953352	
+
+$ touch one.txt			//created a new text file
+
+$ cat >> one.txt		//feeding data into the file
+alpha
+bravo
+charlie
+delta         
+foxtrot
+^C
+
+$ rm one.txt			//deleting the file
+
+$ touch file1.txt		//creating a new text file
+
+$ cat >> file1.txt		//feeding data into the new file
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+^C
+
+$ head -6 file1.txt			//displaying first 6 lines
+a
+b
+c
+d
+e
+f
+
+$ tail -6 file1.txt			//displaying last 6 lines
+h
+i
+j
+k
+l
+m
+
+$ cp file1.txt file2.txt		//created a copy of file1
+
+$ mv file2.txt lab_01			//moved file2 to lab_01 dir
+
+$ mv file1.txt one.txt			//renamed file1.txt to one.txt
+
+$ rm -i lab_01/file2.txt
+rm: remove regular file ‘lab_01/file2.txt’? n	//file not removed
+
+$ rm -i lab_01/file2.txt
+rm: remove regular file ‘lab_01/file2.txt’? y	//file deleted
+
+$ echo "Hello World"
+Hello World
+
+$ touch file123.txt			//creating 4 files
+$ touch file124.txt
+$ touch file125.txt
+$ touch file126.txt
+
+$ ls					//displaying the contents
+file123.txt  file125.txt  lab1.txt   one.txt
+file124.txt  file126.txt  
+
+$ rm file*.txt				//removing files
+
+$ ls					//displaying
+lab1.txt  one.txt
+
+
+$ touch file9.txt			//creating 3 files
+$ touch file99.txt
+$ touch file999.txt
+
+$ ls
+file999.txt  file99.txt  file9.txt  lab1.txt  one.txt
+
+$ rm file?.txt
+
+$ ls
+file999.txt  file99.txt  lab1.txt  one.txt
+
+$ file one.txt
+one.txt: ASCII text
+
+$ touch two.txt
+$ touch three.txt
+$ touch four.odt
+$ touch five.pdf
+
+$ ls *.txt			//any text file
+file999.txt file99.txt lab1.txt one.txt three.txt two.txt
+
+$ touch file3file.pdf
+
+ls *[0-9]*.pdf		//atleast one digit
+file3file.pdf
+
+ls ????*.*			//minimum 4 letters
+file3file.pdf file999.txt file99.txt five.pdf four.odt lab1.txt lab1.txt~ three.txt
+
+$ ls [a,e,i,o,u]*.*		//first letter is a vowel
+one.txt
+//	$ ls [aeiouAEIOU]*.*
+
+$ ls [b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z]*.*
+file3file.pdf file999.txt file99.txt five.pdf four.odt lab1.txt lab1.txt~ three.txt two.txt
+				//first letter not a vowel
+$ ls [!aeiouAEIOU]*.*
+file3file.pdf  file99.txt  four.odt  lab1.txt~  two.txt
+file999.txt    five.pdf    lab1.txt  three.txt
+
+
+
+

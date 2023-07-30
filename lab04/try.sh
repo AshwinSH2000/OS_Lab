@@ -1,0 +1,2 @@
+echo "ashwinsh"
+echo $USER
